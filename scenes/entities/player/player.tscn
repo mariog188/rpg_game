@@ -73,6 +73,42 @@ tracks/0/keys = {
 "update": 1,
 "values": [24, 25, 26, 27, 28, 29]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitBox:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitBox:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(15, -45), Vector2(15, -45), Vector2(-13, 24)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -4.1887903]
+}
 
 [sub_resource type="Animation" id="Animation_bjvvg"]
 resource_name = "attack_right"
@@ -142,6 +178,42 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [36, 37, 38, 39, 40, 41]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitBox:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitBox:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(15, 9), Vector2(13.999998, 20), Vector2(-2.1457672e-06, -71)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.9285889, 1.9285889, -0.9302605]
 }
 
 [sub_resource type="Animation" id="Animation_635qg"]
@@ -218,7 +290,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(22, -51), Vector2(22, -51), Vector2(44, -8)]
+"values": [Vector2(22, -51), Vector2(22, -51), Vector2(-56.000004, -53.000004)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -230,7 +302,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0, 2.024582]
+"values": [0.0, 0.0, -1.993166]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bjvvg"]
@@ -316,6 +388,7 @@ script = ExtResource("1_635qg")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -33)
 texture = ExtResource("1_1hmtu")
+flip_h = true
 hframes = 6
 vframes = 8
 
@@ -344,7 +417,7 @@ monitoring = false
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, -23)
+position = Vector2(-44, -23)
 shape = SubResource("RectangleShape2D_635qg")
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

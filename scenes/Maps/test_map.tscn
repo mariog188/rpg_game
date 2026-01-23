@@ -448,6 +448,7 @@ position = Vector2(178, 603)
 
 [node name="Enemies" type="Node2D" parent="."]
 y_sort_enabled = true
+position = Vector2(18, 25)
 
 [node name="Enemy" parent="Enemies" instance=ExtResource("17_rtnu0")]
 position = Vector2(693, 430)
