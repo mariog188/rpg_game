@@ -24,6 +24,10 @@ window/size/viewport_height=1080
 
 project/assembly_name="RPG Game"
 
+[global_group]
+
+player=""
+
 [input]
 
 left={
