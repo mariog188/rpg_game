@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="RPG Game"
-run/main_scene="uid://05q31qrak2nx"
+run/main_scene="uid://cub8qqn1hfe0o"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PlayerData="*res://scripts/global/player_data.gd"
+LevelData="*res://scripts/data/level_data.gd"
 
 [display]
 
@@ -27,6 +32,7 @@ project/assembly_name="RPG Game"
 [global_group]
 
 player=""
+enemies=""
 
 [input]
 
